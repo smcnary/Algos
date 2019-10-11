@@ -10,7 +10,10 @@ namespace Algorithms
 	{
 		static void Main(string[] args)
 		{
-			BubbleSort();
+			int[] a = { 3, 0, 2, 5, -1, 4, 1 };
+
+			IntArrayBubbleSort(a);
+			BubbleSort(a);
 		}
 
 		
@@ -20,10 +23,22 @@ namespace Algorithms
 			data [m] = data [n];
 			data [n] = temporary;
 		}
-		
-		private static void BubbleSort()
+
+		public static void IntArrayBubbleSort (int[] data)
 		{
-			int[] a = { 3, 0, 2, 5, -1, 4, 1 }; 
+			int i, j;
+			int N = data.Length;
+
+			for (j=N-1; j>0; j--) {
+				for (i=0; i<j; i++) {
+					if (data [i] > data [i + 1])
+						ExchangeDataTypes(data, i, i + 1);
+				}
+			}
+		}
+		
+		private static void BubbleSort(int[] a)
+		{
 			int t; 
 			Console.WriteLine("Original array :");
 			foreach (int aa in a)                       
