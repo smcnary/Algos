@@ -13,6 +13,14 @@ namespace Algorithms
 			BubbleSort();
 		}
 
+		
+		public static void ExchangeDataTypes (int[] data, int m, int n)
+		{
+			int temporary = data [m];
+			data [m] = data [n];
+			data [n] = temporary;
+		}
+		
 		private static void BubbleSort()
 		{
 			int[] a = { 3, 0, 2, 5, -1, 4, 1 }; 
