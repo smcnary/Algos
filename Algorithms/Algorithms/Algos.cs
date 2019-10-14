@@ -25,6 +25,10 @@ namespace Algorithms
 			int i, j;
 			int N = data.Length;
 
+			Console.WriteLine("Original array Bubble#1 :");
+			foreach (int aa in data)
+				Console.Write(aa + " ");
+
 			for (j = N - 1; j > 0; j--)
 			{
 				for (i = 0; i < j; i++)
@@ -33,6 +37,10 @@ namespace Algorithms
 						Exchange(data, i, i + 1);
 				}
 			}
+
+			Console.WriteLine("\n" + "Sorted array Bubble#1 :");
+			foreach (int aa in data)
+				Console.Write(aa + " ");
 		}
 
 		private int IntArrayMin(int[] data, int start)
@@ -49,12 +57,21 @@ namespace Algorithms
 			int i;
 			int N = data.Length;
 
+			Console.WriteLine("Original array selectionSort :");
+			foreach (int aa in data)
+				Console.Write(aa + " ");
+
 			for (i = 0; i < N - 1; i++)
 			{
 				int k = IntArrayMin(data, i);
 				if (i != k)
 					Exchange(data, i, k);
 			}
+
+			Console.WriteLine("\n" + "Sorted array :");
+			foreach (int aa in data)
+				Console.Write(aa + " ");
+			Console.Write("\n");
 		}
 
 		public void BubbleSort(IList<int> a)
