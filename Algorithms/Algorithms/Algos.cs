@@ -99,6 +99,32 @@ namespace Algorithms
 		}
 
 
+		public int[] TwoSum(int[] nums, int target)
+		{
+			Dictionary<int, int> dictionary = new Dictionary<int, int>();
+			for (int i = 0; i < nums.Length; i++)
+			{
+				if (!dictionary.ContainsKey(nums[i]))
+				{
+					dictionary.Add(nums[i], i);
+				}
+				
+			}
+
+			for (int i = 0; i < nums.Length; i++)
+			{
+				int complement = target - nums[i];
+
+				if (dictionary.ContainsKey(complement) && dictionary[complement] != i)
+				{
+					return new[] {i, dictionary[complement]};
+				}
+			}
+
+			throw new Exception("No two sum solution");
+		}
+
+
 		public void RadixSort()
 		{
 			List<string> allnums = new List<string>();
