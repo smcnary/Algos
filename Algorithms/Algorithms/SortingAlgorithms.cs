@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,16 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-	public class Algos
+	public class SortingAlgorithms
 	{
-		public Algos()
+		
+
+		public SortingAlgorithms()
 		{
 			
 		}
+
+		
 
 		private void Exchange(int[] data, int m, int n)
 		{
@@ -123,6 +128,17 @@ namespace Algorithms
 
 			throw new Exception("No two sum solution");
 		}
+
+
+		public void SortColors(int[] nums)
+		{
+			int p0 = 0, curr = 0;
+
+			int p2 = nums.Length - 1;
+
+			int tmp;
+		}
+
 
 
 		public void RadixSort()

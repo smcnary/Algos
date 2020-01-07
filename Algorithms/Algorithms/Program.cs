@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 
@@ -8,34 +10,38 @@ namespace Algorithms
 	internal class Program
 	{
 		static readonly object _locker = new object();
+		private static IList nums;
+
 		private static void Main(string[] args)
 		{
 			//int[] a = { 3, 0, 2, 5, -1, 4, 1 };
 			
-			//Algos algos = new Algos();
+			//SortingAlgorithms sortingAlgorithms = new SortingAlgorithms();
 			////Fastest to slowest
 			//lock (_locker)
 			//{
-			//	algos.RadixSort();
+			//	sortingAlgorithms.RadixSort();
 
 			//}
 			//lock (_locker)
 			//{
-			//	algos.IntArraySelectionSort(a);
+			//	sortingAlgorithms.IntArraySelectionSort(a);
 			//}
 
 			//lock (_locker)
 			//{
-			//	algos.IntArrayBubbleSort(a);
+			//	sortingAlgorithms.IntArrayBubbleSort(a);
 			//}
 
 			//lock (_locker)
 			//{
-			//	algos.BubbleSort(a);
+			//	sortingAlgorithms.BubbleSort(a);
 			//}
 
+			SortingAlgorithms sortingAlgorithms = new SortingAlgorithms();
+			BinaryTreeTraversals binaryTreeTraversals = new BinaryTreeTraversals();
 
-
+			
 
 		}
 
