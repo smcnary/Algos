@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryTreeTraversals.cs" />
+    <Compile Include="CArray.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="SortingAlgorithms.cs" />
     <Compile Include="Program.cs" />
