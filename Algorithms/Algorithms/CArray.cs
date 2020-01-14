@@ -8,39 +8,52 @@ namespace Algorithms
 {
 	public class CArray
 	{
-		private int [] arr;
-		private int upper;
-		private int numElements;
+		private readonly int [] _arr;
+		private readonly int _upper;
+		private int _numElements;
 		public CArray(int size) {
-			arr = new int[size];
-			upper = size-1;
-			numElements = 0;
+			_arr = new int[size];
+			_upper = size-1;
+			_numElements = 0;
 		}
 
 		public void Insert(int item) {
-			arr[numElements] = item;
-			numElements++;
+			_arr[_numElements] = item;
+			_numElements++;
 		}
 
 		public void DisplayElements() {
-			for(int i = 0; i <= upper; i++)
-				Console.Write(arr[i] + " ");
+			for(int i = 0; i <= _upper; i++)
+				Console.Write(_arr[i] + " ");
 			Console.ReadLine();
 		}
 		public void Clear() {
-			for(int i = 0; i <= upper; i++)
-				arr[i] = 0;
-			numElements = 0;
+			for(int i = 0; i <= _upper; i++)
+				_arr[i] = 0;
+			_numElements = 0;
+		}
+
+		public void SelectionSort() {
+			int min, temp;
+			for(int outer = 0; outer <= _upper; outer++) {
+				min = outer;
+				for(int inner = outer + 1; inner <= _upper; inner++)
+					if (_arr[inner] < _arr[min])
+						min = inner;
+				temp = _arr[outer];
+				_arr[outer] = _arr[min];
+				_arr[min] = temp;
+			}
 		}
 
 		public void BubbleSort() {
 			int temp;
-			for(int outer = upper; outer >= 1; outer--) {
+			for(int outer = _upper; outer >= 1; outer--) {
 				for(int inner = 0; inner <= outer-1;inner++) {
-					if ((int)arr[inner] > arr[inner+1]) {
-						temp = arr[inner];
-						arr[inner] = arr[inner+1];
-						arr[inner+1] = temp;
+					if ((int)_arr[inner] > _arr[inner+1]) {
+						temp = _arr[inner];
+						_arr[inner] = _arr[inner+1];
+						_arr[inner+1] = temp;
 					}
 				}
 				this.DisplayElements();
@@ -55,7 +68,7 @@ namespace Algorithms
 			Console.WriteLine("Before sorting: ");
 			nums.DisplayElements();
 			Console.WriteLine("During sorting: ");
-			nums.BubbleSort();
+			nums.SelectionSort();
 			Console.WriteLine("After sorting: ");
 			nums.DisplayElements();
 
