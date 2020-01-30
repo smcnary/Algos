@@ -46,6 +46,7 @@
     <Compile Include="BinaryTreeTraversals.cs" />
     <Compile Include="CArray.cs" />
     <Compile Include="Collection.cs" />
+    <Compile Include="LeetCodes.cs" />
     <Compile Include="SortingAlgorithms.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

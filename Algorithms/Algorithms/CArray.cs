@@ -34,10 +34,18 @@ namespace Algorithms
 		}
 
 		public void SelectionSort() {
+			//initalize values that change throughout the algo.
 			int min, temp;
+
+			//Two arrays
+			//Outer one starts at 0;  continues until it reaches the limit of the array; 
+			//Inner array starts outer + 1; and continues to iterate through outer + 1 until it reaches the limit of the array (upper)
+			//min is initialized to outer, which is 0;
 			for(int outer = 0; outer <= _upper; outer++) {
 				min = outer;
 				for(int inner = outer + 1; inner <= _upper; inner++)
+						//if the value of _arr[inner] < _arr[min]
+						//
 					if (_arr[inner] < _arr[min])
 						min = inner;
 				temp = _arr[outer];
